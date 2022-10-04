@@ -10,7 +10,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -f Dockerfile -t bellacoda99/jenkins .'
+        sh 'docker build -f Dockerfile -t bellacoda/jenkins .'
       }
     }
 
