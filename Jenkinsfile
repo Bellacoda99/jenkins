@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -f Dockerfile -t Bellacoda99/jenkins.git .'
+        sh 'docker build -f Dockerfile -t bellacoda99/jenkins.git .'
       }
     }
 
@@ -19,7 +19,7 @@ pipeline {
           echo '${env.DOCKERHUB_USER}'
           echo '${env.DOCKERHUB_TOKEN}'
         	sh "docker login -u ${env.DOCKERHUB_USER} -p ${env.DOCKERHUB_TOKEN}"
-          sh 'docker push Bellacoda99/jenkins.git'
+          sh 'docker push bellacoda99/jenkins.git'
         }
       }
     }
