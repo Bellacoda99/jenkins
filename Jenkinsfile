@@ -20,7 +20,7 @@ pipeline {
           echo '${env.DOCKERHUB_USER}'
           echo '${env.DOCKERHUB_TOKEN}'
         	sh "docker login -u ${env.DOCKERHUB_USER} -p ${env.DOCKERHUB_TOKEN}"
-          sh 'docker push bellacoda99/jenkins.git'
+          sh 'docker push bellacoda99/jenkins'
         }
       }
     }
